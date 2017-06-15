@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+    defaultConfig {
+        applicationId "com.example.bharti.demo"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/ECLIPSE_.SF'
+        exclude 'META-INF/ECLIPSE_.RSA'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+    }
+
+    useLibrary 'org.apache.http.legacy'
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+configurations {
+    compile.exclude group: "org.apache.httpcomponents", module: "httpclient"
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    /*
+    compile 'com.applozic.communication.uiwidget:mobicomkitui:4.77'
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.android.support:design:25.0.0'
+    compile 'com.android.support:support-v4:25.0.0'
+    compile 'org.apache.httpcomponents:httpclient:4.5'
+    compile 'org.apache.httpcomponents:httpmime:4.3.3'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.google.firebase:firebase-appindexing:10.0.1'
+    compile 'com.google.android.gms:play-services-maps:10.0.1'
+    compile 'com.google.android.gms:play-services-places:10.0.1'
+    compile 'com.google.android.gms:play-services-location:10.0.1'
+    compile 'com.google.firebase:firebase-auth:10.0.0'
+    compile 'com.google.firebase:firebase-database:10.0.0'
+    compile 'com.firebaseui:firebase-ui-database:1.0.1'
+    compile 'com.firebase:firebase-client-android:2.3.1'
+    compile 'com.firebaseui:firebase-ui:0.2.0'
+    compile 'com.google.firebase:firebase-storage:10.0.0'
+    //compile 'org.apache.httpcomponents:httpcore:4.3.2'
+    //compile files('libs/httpclient-4.2.1.jar')
+    compile group: 'org.apache.httpcomponents' , name: 'httpclient-android' , version: '4.3.5.1'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    */
+    compile group: 'org.apache.httpcomponents', name: 'httpclient-android', version: '4.3.5.1'
+
+    compile files('libs/PhotoUtil.jar')
+    compile 'com.applozic.communication.uiwidget:mobicomkitui:4.77'
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.android.support:design:25.0.0'
+    compile 'com.android.support:support-v4:25.0.0'
+    compile 'org.apache.httpcomponents:httpclient:4.5'
+    compile 'org.apache.httpcomponents:httpmime:4.3.3'
+    compile 'com.google.android.gms:play-services-appindexing:9.0.0'
+    compile 'com.google.firebase:firebase-core:9.4.0'
+    compile 'com.firebaseui:firebase-ui:1.1.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.firebase:firebase-client-android:2.5.2'
+    compile 'com.itextpdf:itext-pdfa:5.5.10'
+    compile 'com.itextpdf:itextg:5.5.9'
+    compile group: 'org.bouncycastle', name: 'bcprov-jdk16', version: '1.46'
+    compile 'com.tom_roush:pdfbox-android:1.8.9.1'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    compile 'com.google.firebase:firebase-storage:9.4.0'
+}
+apply plugin: 'com.google.gms.google-services'

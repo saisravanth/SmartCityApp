@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "755639922947",
+    "firebase_url": "https://smartcitychat.firebaseio.com",
+    "project_id": "smartcitychat",
+    "storage_bucket": "smartcitychat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755639922947:android:861a0dbd765dbdf1",
+        "android_client_info": {
+          "package_name": "com.example.bharti.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755639922947-gk34b2tlp488lonkc9ktmb58i3p7sf3g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bharti.demo",
+            "certificate_hash": "e190abfd3fd427d46ad9f5608d038f951d8cf557"
+          }
+        },
+        {
+          "client_id": "755639922947-28gqv9ks4d96rugl61nkl68ru3sr3qsa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUeKYKoNtarFtawnUcEas8kcHGgseftDA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755639922947-psk74pp2g5sv8ahm1t9c3jcg8bsnsgh1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "sap.simple.p2"
+              }
+            },
+            {
+              "client_id": "755639922947-28gqv9ks4d96rugl61nkl68ru3sr3qsa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
